@@ -6,7 +6,7 @@ def test_locator_role(page:Page):
     #page.locator("xpath=//*[@id='artsSliderTitle-:rq:']/a/span")
     page.get_by_role("link", name="Хиты, проверенные временем").click()
     expect(page).to_have_title("Хиты, проверенные временем – подборка книг – Литрес")
-    page.get_by_role("button", name="Найти").click()#кнопка по какому то типу
+    page.get_by_role("button", name="Найти").click()
     expect(page.get_by_text("стивен кинг")).to_be_visible()
 
 def test_locator_placeholder(page:Page):
